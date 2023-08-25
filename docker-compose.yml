@@ -1,7 +1,7 @@
 services:
   web:
     build: .
-    command: ./docker-entrypoint.sh
+    command: bash ./docker-entrypoint.sh
     ports:
       - 8000:8000
     restart: on-failure
