@@ -6,6 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    Works
+    <h1>Works</h1>
+
+    <script>
+        const url = `ws://${window.location.host}/ws/socket-server`;
+
+        const socket = new WebSocket(url);
+
+        socket.onmessage = (e) => {
+            let data = JSON.parse(e.data);
+            console.log(data);
+        }
+    </script>
 </body>
 </html>
